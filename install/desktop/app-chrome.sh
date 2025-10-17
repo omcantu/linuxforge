@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/.local/share/omakub/install/lib/env.sh
+source ~/.local/share/linuxforge/install/lib/env.sh
 # Browse the web with the most popular browser. See https://www.google.com/chrome/
 if [ "$OS_NAME" = "Ubuntu" ]; then
   cd /tmp

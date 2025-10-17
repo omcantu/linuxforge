@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Source shared env helpers if available (idempotent)
-if [[ -f "$HOME/.local/share/omakub/install/lib/env.sh" ]]; then
-	source "$HOME/.local/share/omakub/install/lib/env.sh"
+if [[ -f "$HOME/.local/share/linuxforge/install/lib/env.sh" ]]; then
+	source "$HOME/.local/share/linuxforge/install/lib/env.sh"
 else
 	# fall back to repo copy (works when executed from repo root)
 	source "$(dirname "$(dirname "$0")")/install/lib/env.sh" || true
@@ -23,15 +23,9 @@ set_font() {
 		fc-cache
 		cd -
 		clear
-		source $OMAKUB_PATH/ascii.sh
+		source $linuxforge_PATH/ascii.sh
 	fi
-
-		#if [[ -n "${KWRC:-}" ]]; then
-		#	$KWRC --file kdeglobals --group General --key fixed "$font_name,10,-1,5,50,0,0,0,0,0"
-		#else
-		#	echo "Warning: kwriteconfig not found; skipping kdeglobals font setting"
-		#fi
-	cp "$OMAKUB_PATH/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
+	cp "$linuxforge_PATH/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
 	sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.json
 }
 
@@ -55,9 +49,9 @@ case $choice in
 	set_font "MesloLGS Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip" "ttf"
 	;;
 "> Change size")
-	source $OMAKUB_PATH/bin/omakub-sub/font-size.sh
+	source $linuxforge_PATH/bin/linuxforge-sub/font-size.sh
 	exit
 	;;
 esac
 
-source $OMAKUB_PATH/bin/omakub-sub/menu.sh
+source $linuxforge_PATH/bin/linuxforge-sub/menu.sh

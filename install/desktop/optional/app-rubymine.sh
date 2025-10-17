@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/.local/share/omakub/install/lib/env.sh
+source ~/.local/share/linuxforge/install/lib/env.sh
   # Define the download URL for the latest RubyMine release.
   # You might need to check JetBrains' website for the most recent version.
   RUBYMINE_VERSION="2025.2.2"  # Example version

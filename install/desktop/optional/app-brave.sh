@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/.local/share/omakub/install/lib/env.sh
+source ~/.local/share/linuxforge/install/lib/env.sh
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
   sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg

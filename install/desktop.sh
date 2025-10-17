@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run desktop installers
-for installer in ~/.local/share/omakub/install/desktop/*.sh; do
+for installer in ~/.local/share/linuxforge/install/desktop/*.sh; do
 	echo " Running $installer..."
 	source "$installer"
 done

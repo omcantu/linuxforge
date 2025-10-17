@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Configure the bash shell using -omakub defaults
+# Configure the bash shell using -linuxforge defaults
 [ -f ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
-cp ~/.local/share/omakub/configs/bashrc ~/.bashrc
+cp ~/.local/share/linuxforge/configs/bashrc ~/.bashrc
 
 # Load the PATH for use later in the installers
-source ~/.local/share/omakub/defaults/bash/shell
+source ~/.local/share/linuxforge/defaults/bash/shell
 
 [ -f ~/.inputrc ] && mv ~/.inputrc ~/.inputrc.bak
-# Configure the inputrc using -omakub defaults
-cp ~/.local/share/omakub/configs/inputrc ~/.inputrc
+# Configure the inputrc using -linuxforge defaults
+cp ~/.local/share/linuxforge/configs/inputrc ~/.inputrc

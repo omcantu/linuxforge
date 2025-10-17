@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/.local/share/omakub/install/lib/env.sh
+source ~/.local/share/linuxforge/install/lib/env.sh
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
   # Install 1password and 1password-cli single script

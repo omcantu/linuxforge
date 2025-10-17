@@ -11,7 +11,7 @@ ascii_art='________                  __        ___.
 '
 
 echo -e "$ascii_art"
-echo "=> Omakub is for fresh Kubuntu 24.04+ or Fedora KDE installations only!"
+echo "=> linuxforge is for fresh Kubuntu 24.04+ or Fedora KDE installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
 if command -v dnf >/dev/null 2>&1; then
@@ -31,10 +31,10 @@ export PKG_MGR
 
 sudo $PKG_MGR install -y git >/dev/null
 
-echo "Cloning Omakub..."
-rm -rf ~/.local/share/omakub
-git clone https://github.com/omcantu/omakubtu.git ~/.local/share/omakub >/dev/null
+echo "Cloning linuxforge..."
+rm -rf ~/.local/share/linuxforge
+git clone https://github.com/omcantu/linuxforgetu.git ~/.local/share/linuxforge >/dev/null
 
 
 echo "Installation starting..."
-source ~/.local/share/omakub/install.sh
+source ~/.local/share/linuxforge/install.sh

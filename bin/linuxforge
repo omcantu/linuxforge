@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source $linuxforge_PATH/bin/linuxforge-sub/header.sh
+source $linuxforge_PATH/bin/linuxforge-sub/menu.sh

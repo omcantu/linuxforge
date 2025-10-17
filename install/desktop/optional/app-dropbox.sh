@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/.local/share/omakub/install/lib/env.sh
+source ~/.local/share/linuxforge/install/lib/env.sh
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
   # Sync files across machines using https://dropbox.com

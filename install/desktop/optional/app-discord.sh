@@ -1,6 +1,6 @@
 #!/bin/bash
 # A Communication platform for voice, video, and text messaging https://discord.com/
-source ~/.local/share/omakub/install/lib/env.sh
+source ~/.local/share/linuxforge/install/lib/env.sh
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
   cd /tmp

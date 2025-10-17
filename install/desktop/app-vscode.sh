@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/.local/share/omakub/install/lib/env.sh
+source ~/.local/share/linuxforge/install/lib/env.sh
 
 
 
@@ -48,7 +48,7 @@ fi
 
 
 mkdir -p ~/.config/Code/User
-cp ~/.local/share/omakub/configs/vscode.json ~/.config/Code/User/settings.json
+cp ~/.local/share/linuxforge/configs/vscode.json ~/.config/Code/User/settings.json
 
 # Install default supported themes
 code --install-extension dracula-theme.theme-dracula

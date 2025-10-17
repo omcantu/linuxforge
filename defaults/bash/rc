@@ -1,5 +1,5 @@
-source ~/.local/share/omakub/defaults/bash/shell
-source ~/.local/share/omakub/defaults/bash/aliases
-source ~/.local/share/omakub/defaults/bash/functions
-source ~/.local/share/omakub/defaults/bash/prompt
-source ~/.local/share/omakub/defaults/bash/init
+source ~/.local/share/linuxforge/defaults/bash/shell
+source ~/.local/share/linuxforge/defaults/bash/aliases
+source ~/.local/share/linuxforge/defaults/bash/functions
+source ~/.local/share/linuxforge/defaults/bash/prompt
+source ~/.local/share/linuxforge/defaults/bash/init

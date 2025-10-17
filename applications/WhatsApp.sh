@@ -9,7 +9,7 @@ Comment=WhatsApp Messenger
 Exec=google-chrome --app="https://web.whatsapp.com" --name=WhatsApp --class=Whatsapp
 Terminal=false
 Type=Application
-Icon=/home/$USER/.local/share/omakub/applications/icons/WhatsApp.png
+Icon=/home/$USER/.local/share/linuxforge/applications/icons/WhatsApp.png
 Categories=Network;Internet;
 MimeType=text/html;text/xml;application/xhtml_xml;
 StartupNotify=true
