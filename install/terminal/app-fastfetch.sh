@@ -5,8 +5,8 @@ source ~/.local/share/linuxforge/install/lib/env.sh
 if [ "$OS_NAME" = "Ubuntu" ]; then
   sudo add-apt-repository -y ppa:zhangsongcui3371/fastfetch
 fi
-sudo $PKG_MGR update
-sudo $PKG_MGR install -y fastfetch
+run_pkg_mgr update
+run_pkg_mgr install fastfetch
 
 # Only attempt to set configuration if fastfetch is not already set
 if [ ! -f "$HOME/.config/fastfetch/config.jsonc" ]; then

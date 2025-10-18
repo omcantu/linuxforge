@@ -2,15 +2,6 @@
 
 set -e
 
-ascii_art='________                  __        ___.
-\_____  \   _____ _____  |  | ____ _\_ |__
- /   |   \ /     \\__   \ |  |/ /  |  \ __ \
-/    |    \  Y Y  \/ __ \|    <|  |  / \_\ \
-\_______  /__|_|  (____  /__|_ \____/|___  /
-        \/      \/     \/     \/         \/
-'
-
-echo -e "$ascii_art"
 echo "=> linuxforge is for fresh Kubuntu 24.04+ or Fedora KDE installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
@@ -23,14 +14,22 @@ elif command -v apt >/dev/null 2>&1; then
     PKG_MGR=apt
     OS_NAME="Ubuntu"
     sudo $PKG_MGR update >/dev/null
+elif command -v pacman >/dev/null 2>&1; then
+    PKG_MGR=pacman
+    OS_NAME="Arch"
+    sudo $PKG_MGR -Syu --noconfirm
 else
-    echo "Warning : no supported package manager found (dnf or apt)"
+    echo "Warning : no supported package manager found (dnf, apt or pacman)"
     return 1
 fi
 export PKG_MGR
 
-sudo $PKG_MGR install -y git >/dev/null
-
+if [[ "$OS_NAME" = "Arch" ]]; then
+  sudo pacman -Syu --noconfirm --needed git
+  sudo pacman -S --needed --noconfirm base-devel
+else
+  sudo $PKG_MGR install -y git >/dev/null
+fi
 echo "Cloning linuxforge..."
 rm -rf ~/.local/share/linuxforge
 git clone https://github.com/omcantu/linuxforgetu.git ~/.local/share/linuxforge >/dev/null

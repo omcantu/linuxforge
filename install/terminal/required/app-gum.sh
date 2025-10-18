@@ -10,5 +10,5 @@ if [ "$OS_NAME" = "Ubuntu" ]; then
   rm gum.deb
   cd -
 else
-  sudo $PKG_MGR install -y gum
+  run_pkg_mgr install gum
 fi

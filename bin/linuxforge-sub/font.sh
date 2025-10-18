@@ -23,7 +23,6 @@ set_font() {
 		fc-cache
 		cd -
 		clear
-		source $linuxforge_PATH/ascii.sh
 	fi
 	cp "$linuxforge_PATH/configs/alacritty/fonts/$file_name.toml" ~/.config/alacritty/font.toml
 	sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.json

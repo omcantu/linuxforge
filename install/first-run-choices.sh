@@ -1,7 +1,7 @@
 #!/bin/bash
 
-OPTIONAL_APPS=("1password" "Spotify" "Zoom" "Dropbox" "Steam" "Virtualbox" "Discord" "OBS Studio")
-DEFAULT_OPTIONAL_APPS='1password,Spotify,Zoom,Steam'
+OPTIONAL_APPS=("Spotify" "Zoom" "Dropbox" "Steam" "Virtualbox" "Discord" "OBS Studio")
+DEFAULT_OPTIONAL_APPS='Spotify,Zoom,Steam'
 export linuxforge_FIRST_RUN_OPTIONAL_APPS=$(gum choose "${OPTIONAL_APPS[@]}" --no-limit --selected $DEFAULT_OPTIONAL_APPS --height 7 --header "Select optional apps" | tr ' ' '-')
 
 AVAILABLE_LANGUAGES=("Ruby on Rails" "Node.js" "Go" "PHP" "Python" "Elixir" "Rust" "Java")

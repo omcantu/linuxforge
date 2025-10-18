@@ -1,7 +1,7 @@
 #!/bin/bash
 source ~/.local/share/linuxforge/install/lib/env.sh
 # This script installs btop, a resource monitor that shows usage and stats for processor, memory, disks, network and processes.
-sudo $PKG_MGR install -y btop
+run_pkg_mgr install btop
 
 # Use linuxforge btop config
 mkdir -p ~/.config/btop/themes

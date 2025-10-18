@@ -2,7 +2,7 @@
 
 source $linuxforge_PATH/defaults/bash/functions
 
-AVAILABLE_WEB_APPS=("Chat GPT" "Google Photos" "Google Contacts" "Tailscale")
+AVAILABLE_WEB_APPS=("Chat GPT" "Google Photos" "Google Contacts")
 apps=$(gum choose "${AVAILABLE_WEB_APPS[@]}" --no-limit --height 6 --header "Select web apps")
 
 if [[ -n "$apps" ]]; then
@@ -20,10 +20,6 @@ if [[ -n "$apps" ]]; then
     "Google Contacts")
       web2app 'Google Contacts' https://contacts.google.com/ https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-contacts.png
       #app2folder 'Google Contacts.desktop' WebApps
-      ;;
-    "Tailscale")
-      web2app 'Tailscale' https://login.tailscale.com/admin/ https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/tailscale-light.png
-      #app2folder 'Tailscale.desktop' WebApps
       ;;
     esac
   done
