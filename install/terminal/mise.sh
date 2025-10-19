@@ -19,4 +19,6 @@ elseif [ "$OS_NAME" = "Fedora" ]; then
 
   # Install mise
   run_pkg_mgr install mise
+else
+  run_pkg_mgr install mise
 fi

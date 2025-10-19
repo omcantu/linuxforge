@@ -33,4 +33,15 @@ elseif [ "$OS_NAME" = "Fedora" ]; then
   # Start and enable Docker service
   sudo systemctl start docker
   sudo systemctl enable docker
+else
+  run_pkg_mgr install docker docker-buildx docker-compose
+  sudo usermod -aG docker ${USER}
+
+  # Limit log size to avoid running out of disk
+  sudo mkdir -p /etc/docker
+  echo '{"log-driver":"json-file","log-opts":{"max-size":"10m","max-file":"5"}}' | sudo tee /etc/docker/daemon.json
+
+  # Start and enable Docker service
+  sudo systemctl start docker
+  sudo systemctl enable docker
 fi
