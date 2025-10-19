@@ -24,9 +24,9 @@ if [[ -n "$languages" ]]; then
       ;;
     PHP)
       if [ "$OS_NAME" = "Ubuntu" ]; then
-        sudo $PKG_MGR install -y php php-{curl,apcu,intl,mbstring,opcache,pgsql,mysql,sqlite3,redis,xml,zip} --no-install-recommends
+        run_pkg_mgr install php php-{curl,apcu,intl,mbstring,opcache,pgsql,mysql,sqlite3,redis,xml,zip} --no-install-recommends
       else
-        sudo $PKG_MGR install -y php php-{cli,curl,apcu,intl,mbstring,opcache,pgsql,mysqlnd,sqlite3,redis,xml,zip}
+        run_pkg_mgr install php php-{cli,curl,apcu,intl,mbstring,opcache,pgsql,mysqlnd,sqlite3,redis,xml,zip}
       fi
       php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
       php composer-setup.php --quiet && sudo mv composer.phar /usr/local/bin/composer

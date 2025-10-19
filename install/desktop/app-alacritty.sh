@@ -1,7 +1,7 @@
 #!/bin/bash
 source ~/.local/share/linuxforge/install/lib/env.sh
 # Alacritty is a GPU-powered and highly extensible terminal. See https://alacritty.org/
-sudo $PKG_MGR install -y alacritty
+run_pkg_mgr install alacritty
 mkdir -p ~/.config/alacritty
 cp ~/.local/share/linuxforge/configs/alacritty.toml ~/.config/alacritty/alacritty.toml
 cp ~/.local/share/linuxforge/configs/alacritty/shared.toml ~/.config/alacritty/shared.toml

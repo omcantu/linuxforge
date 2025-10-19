@@ -4,4 +4,4 @@ source ~/.local/share/linuxforge/install/lib/env.sh
 if [ "$OS_NAME" = "Fedora" ]; then
   sudo $PKG_MGR clean all
 fi
-sudo $PKG_MGR install -y obs-studio
+run_pkg_mgr install obs-studio

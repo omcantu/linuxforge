@@ -2,9 +2,9 @@
 source ~/.local/share/linuxforge/install/lib/env.sh
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
-  sudo $PKG_MGR install -y fzf ripgrep bat eza zoxide plocate apache2-utils fd-find tealdeer
+  run_pkg_mgr install fzf ripgrep bat eza zoxide plocate apache2-utils fd-find tealdeer
 else
-  sudo $PKG_MGR install -y fzf ripgrep bat zoxide plocate httpd-tools fd-find tldr
+  run_pkg_mgr install fzf ripgrep bat zoxide plocate httpd-tools fd-find tldr
   #manual install for eza on fedora
   cd /tmp
   EZA_VERSION=$(curl -s "https://api.github.com/repos/eza-community/eza/releases/latest" | grep -Po 'tag_name": "v\K[^"]*')

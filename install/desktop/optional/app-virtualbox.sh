@@ -5,9 +5,9 @@ source ~/.local/share/linuxforge/install/lib/env.sh
 # for a guide on how to run Ubuntu inside it.
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
-  sudo $PKG_MGR install -y virtualbox virtualbox-ext-pack
+  run_pkg_mgr install virtualbox virtualbox-ext-pack
 else
-  sudo $PKG_MGR install -y VirtualBox VirtualBox-guest-additions
+  run_pkg_mgr install VirtualBox VirtualBox-guest-additions
 fi
 sudo usermod -aG vboxusers ${USER}
 

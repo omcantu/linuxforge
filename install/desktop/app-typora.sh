@@ -6,15 +6,15 @@ source ~/.local/share/linuxforge/install/lib/env.sh
 #
 # sudo add-apt-repository -y 'deb https://typora.io/linux ./'
 # sudo add-apt-repository -y 'deb https://typora.io/linux ./'
-# sudo $PKG_MGR update -y
-# sudo $PKG_MGR install -y typora
+# run_pkg_mgr update
+# run_pkg_mgr install typora
 
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
   # Install with db
   cd /tmp
   wget -O typora.deb "https://downloads.typora.io/linux/typora_1.10.8_amd64.deb"
-  sudo $PKG_MGR install -y /tmp/typora.deb
+  run_pkg_mgr install /tmp/typora.deb
   rm typora.deb
   cd -
 else

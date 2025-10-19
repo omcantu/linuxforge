@@ -1,5 +1,5 @@
 #!/bin/bash
 source ~/.local/share/linuxforge/install/lib/env.sh
-sudo $PKG_MGR install -y emacs
+run_pkg_mgr install emacs
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 ~/.config/emacs/bin/doom install

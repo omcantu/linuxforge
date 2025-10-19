@@ -4,11 +4,12 @@ source ~/.local/share/linuxforge/install/lib/env.sh
 if [ "$OS_NAME" = "Ubuntu" ]; then
   cd /tmp
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  sudo $PKG_MGR install -y ./google-chrome-stable_current_amd64.deb
+  run_pkg_mgr install ./google-chrome-stable_current_amd64.deb
   rm google-chrome-stable_current_amd64.deb
   cd -
-else
-  sudo $PKG_MGR install -y fedora-workstation-repositories
+elseif [ "$OS_NAME" = "Fedora" ]; then
+  run_pkg_mgr install fedora-workstation-repositories
   sudo $PKG_MGR config-manager setopt google-chrome.enabled=1
-  sudo $PKG_MGR install -y google-chrome-stable
+  run_pkg_mgr install google-chrome-stable
 fi
+# Todo: Arch google chrome install through yay
