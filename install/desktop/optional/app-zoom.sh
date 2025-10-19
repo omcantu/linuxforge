@@ -15,4 +15,6 @@ elseif [ "$OS_NAME" = "Fedora" ]; then
   run_pkg_mgr install ./zoom_x86_64.rpm
   rm zoom_x86_64.rpm
   cd -
+else
+  yay -S --noconfirm --needed zoom
 fi
