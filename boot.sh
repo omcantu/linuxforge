@@ -32,7 +32,7 @@ else
 fi
 echo "Cloning linuxforge..."
 rm -rf ~/.local/share/linuxforge
-git clone https://github.com/omcantu/linuxforgetu.git ~/.local/share/linuxforge >/dev/null
+git clone https://github.com/omcantu/linuxforge.git ~/.local/share/linuxforge >/dev/null
 
 
 echo "Installation starting..."
