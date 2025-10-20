@@ -20,7 +20,7 @@ installYay() {
         pacman)
             if ! command -v yay >/dev/null 2>&1; then
                 run_pkg_mgr install base-devel git
-                cd /opt && "$ESCALATION_TOOL" git clone https://aur.archlinux.org/yay-bin.git && "$ESCALATION_TOOL" chown -R "$USER": ./yay-bin
+                cd /opt && sudo git clone https://aur.archlinux.org/yay-bin.git && sudo chown -R "$USER": ./yay-bin
                 cd yay-bin && makepkg --noconfirm -si
             fi
             ;;
