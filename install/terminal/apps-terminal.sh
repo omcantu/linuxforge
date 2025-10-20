@@ -2,9 +2,9 @@
 source ~/.local/share/linuxforge/install/lib/env.sh
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
-  run_pkg_mgr install fzf ripgrep bat eza zoxide plocate apache2-utils fd-find tealdeer
+  run_pkg_mgr install fish fzf ripgrep bat eza zoxide plocate apache2-utils fd-find tealdeer
 elseif [ "$OS_NAME" = "Fedora" ]; then
-  run_pkg_mgr install fzf ripgrep bat zoxide plocate httpd-tools fd-find tldr
+  run_pkg_mgr install fish fzf ripgrep bat zoxide plocate httpd-tools fd-find tldr
   #manual install for eza on fedora
   cd /tmp
   EZA_VERSION=$(curl -s "https://api.github.com/repos/eza-community/eza/releases/latest" | grep -Po 'tag_name": "v\K[^"]*')
@@ -14,6 +14,6 @@ elseif [ "$OS_NAME" = "Fedora" ]; then
   rm eza.tar.gz eza
   cd -
 else
-  run_pkg_mgr install eza fzf ripgrep bat zoxide plocate fd tldr bash-completion nvim tree-sitter-cli
+  run_pkg_mgr install fish eza fzf ripgrep bat zoxide plocate fd tldr bash-completion nvim tree-sitter-cli
 fi
 

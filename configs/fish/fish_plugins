@@ -1,0 +1,6 @@
+# Fisher plugins list for linuxforge fish installer
+# One plugin per line, comments and blank lines are ignored
+PatrickF1/fzf.fish
+jorgebucaran/autopair.fish
+dracula/fish
+# add more plugins here as needed
