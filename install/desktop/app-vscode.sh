@@ -17,7 +17,7 @@ elif [ "$OS_NAME" = "Ubuntu" ]; then
 
   run_pkg_mgr update
   run_pkg_mgr install code
-elseif [ "$OS_NAME" = "Arch" ]; then
+elif [ "$OS_NAME" = "Arch" ]; then
   run_pkg_mgr install visual-studio-code-bin
 fi
 # Install default supported themes
