@@ -19,5 +19,5 @@ run_pkg_mgr install \
   imv jq lazydocker lazygit libsecret libvips libyaml libreoffice llvm localsend luarocks mariadb-libs mise ncurses noto-fonts noto-fonts-cjk \
   noto-fonts-emoji noto-fonts-extra nvim obs-studio obsidian openssl plocate postgresql-libs power-profiles-daemon python-gobject \
   python-poetry-core redis readline rust ripgrep signal-desktop tree-sitter-cli ttf-cascadia-mono-nerd \
-  ttf-jetbrains-mono-nerd unzip woff2-font-awesome xmlstarlet xournalpp zoxide zlib sqlite postgresql clutter
+  ttf-jetbrains-mono-nerd unzip woff2-font-awesome xmlstarlet xournalpp zoxide sqlite postgresql clutter
 fi
