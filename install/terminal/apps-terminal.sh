@@ -14,6 +14,6 @@ elif [ "$OS_NAME" = "Fedora" ]; then
   rm eza.tar.gz eza
   cd -
 else
-  run_pkg_mgr install fish eza fzf ripgrep bat zoxide plocate fd tldr bash-completion nvim tree-sitter-cli
+  run_pkg_mgr install fish eza fzf ripgrep bat zoxide plocate fd tealdeer bash-completion nvim tree-sitter-cli
 fi
 
