@@ -7,7 +7,7 @@ run_pkg_mgr install \
   libssl-dev libreadline-dev zlib1g-dev libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev libjemalloc2 \
   libvips imagemagick libmagickwand-dev mupdf mupdf-tools gir1.2-gtop-2.0 gir1.2-clutter-1.0 \
   redis-tools sqlite3 libsqlite3-0 libmysqlclient-dev libpq-dev postgresql-client postgresql-client-common
-elseif [ "$OS_NAME" = "Fedora" ]; then
+elif [ "$OS_NAME" = "Fedora" ]; then
 run_pkg_mgr install \
   @development-tools pkgconfig autoconf bison clang rust \
   openssl-devel readline-devel zlib-devel libyaml-devel readline-devel ncurses-devel libffi-devel gdbm-devel jemalloc \
