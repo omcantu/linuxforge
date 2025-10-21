@@ -3,7 +3,7 @@ source ~/.local/share/linuxforge/install/lib/env.sh
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
   run_pkg_mgr install fish fzf ripgrep bat eza zoxide plocate apache2-utils fd-find tealdeer
-elseif [ "$OS_NAME" = "Fedora" ]; then
+elif [ "$OS_NAME" = "Fedora" ]; then
   run_pkg_mgr install fish fzf ripgrep bat zoxide plocate httpd-tools fd-find tldr
   #manual install for eza on fedora
   cd /tmp
