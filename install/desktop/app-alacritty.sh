@@ -15,5 +15,3 @@ cp ~/.local/share/linuxforge/configs/alacritty/font-size.toml ~/.config/alacritt
 alacritty migrate 2>/dev/null || true
 alacritty migrate -c ~/.config/alacritty/pane.toml 2>/dev/null || true
 alacritty migrate -c ~/.config/alacritty/btop.toml 2>/dev/null || true
-
-source ~/.local/share/linuxforge/install/desktop/set-alacritty-default.sh
