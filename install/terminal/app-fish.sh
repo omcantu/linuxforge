@@ -30,8 +30,9 @@ if [ -n "$FISH_PATH" ]; then
 
   # Only change shell if not already fish
   if [ "$SHELL" != "$FISH_PATH" ]; then
-    echo "Setting fish as default shell for $USER"
-    chsh -s "$FISH_PATH"
+    TARGET_USER="$USER"
+    echo "Changing shell for user $TARGET_USER to $FISH_PATH..."
+    sudo chsh -s "$FISH_PATH" -u "$TARGET_USER"
     echo "Shell changed to fish. Changes will take effect on next login."
   else
     echo "Fish is already the default shell"
