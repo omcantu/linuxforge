@@ -10,7 +10,7 @@ if [ "$OS_NAME" = "Ubuntu" ]; then
 	rm signal-desktop-keyring.gpg
 	run_pkg_mgr update
 	run_pkg_mgr install signal-desktop
-elseif [ "$OS_NAME" = "Arch" ]; then
+elif [ "$OS_NAME" = "Arch" ]; then
 	run_pkg_mgr install signal-desktop
 else
   # Add Signal repository for Fedora
