@@ -9,7 +9,7 @@ if [ "$OS_NAME" = "Ubuntu" ]; then
   echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=$(dpkg --print-architecture)] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
   run_pkg_mgr update
   run_pkg_mgr install mise
-elseif [ "$OS_NAME" = "Fedora" ]; then
+elif [ "$OS_NAME" = "Fedora" ]; then
   # Install mise for managing multiple versions of languages. See https://mise.jdx.dev/
   run_pkg_mgr install gpg wget curl
 
