@@ -34,7 +34,7 @@ run_pkg_mgr() {
       # For apt and dnf, the subcommands are standardized (install, remove, etc.)
       # and they both use the '-y' flag for non-interactive mode.
       echo "--> Running: sudo $PKG_MGR -y $subcommand $*"
-      sudo "$PKG_MGR" -y "$subcommand" "$@"
+      sudo $PKG_MGR -y $subcommand "$@"
       ;;
 
     "pacman")
@@ -68,7 +68,7 @@ run_pkg_mgr() {
       # The pacman command is constructed using the non-interactive flag,
       # any necessary extra flags (like --needed), the main command flag, and the package list.
       echo "--> Running: sudo pacman --noconfirm $install_extras $pacman_flag $*"
-      sudo pacman --noconfirm "$install_extras" "$pacman_flag" "$@"
+      sudo pacman --noconfirm $install_extras $pacman_flag "$@"
       ;;
 
     *)
