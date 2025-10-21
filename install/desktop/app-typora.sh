@@ -17,7 +17,7 @@ if [ "$OS_NAME" = "Ubuntu" ]; then
   run_pkg_mgr install /tmp/typora.deb
   rm typora.deb
   cd -
-elseif [ "$OS_NAME" = "Arch" ]; then
+elif [ "$OS_NAME" = "Arch" ]; then
   run_pkg_mgr install typora
 else
   # Add Typora repository for Fedora
