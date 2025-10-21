@@ -1,14 +1,17 @@
 #!/bin/bash
 source ~/.local/share/linuxforge/install/lib/env.sh
-cd /tmp
-wget -O nvim.tar.gz "https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz"
-tar -xf nvim.tar.gz
-sudo install nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
-sudo cp -R nvim-linux-x86_64/lib /usr/local/
-sudo cp -R nvim-linux-x86_64/share /usr/local/
-rm -rf nvim-linux-x86_64 nvim.tar.gz
-cd -
-
+if [ "$OS_NAME" = "Ubuntu" ]; then
+  cd /tmp
+  wget -O nvim.tar.gz "https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz"
+  tar -xf nvim.tar.gz
+  sudo install nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
+  sudo cp -R nvim-linux-x86_64/lib /usr/local/
+  sudo cp -R nvim-linux-x86_64/share /usr/local/
+  rm -rf nvim-linux-x86_64 nvim.tar.gz
+  cd -
+else
+  run_pkg_mgr install nvim
+fi
 # Install luarocks and tree-sitter-cli to resolve lazyvim :checkhealth warnings
 run_pkg_mgr install luarocks tree-sitter-cli
 
