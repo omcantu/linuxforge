@@ -8,7 +8,7 @@ if [ "$OS_NAME" = "Ubuntu" ]; then
   run_pkg_mgr install ./zoom_amd64.deb
   rm zoom_amd64.deb
   cd -
-elseif [ "$OS_NAME" = "Fedora" ]; then
+elif [ "$OS_NAME" = "Fedora" ]; then
   # Make video calls using https://zoom.us/
   cd /tmp
   wget https://zoom.us/client/latest/zoom_x86_64.rpm
