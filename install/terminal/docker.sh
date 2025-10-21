@@ -17,7 +17,7 @@ if [ "$OS_NAME" = "Ubuntu" ]; then
 
   # Limit log size to avoid running out of disk
   echo '{"log-driver":"json-file","log-opts":{"max-size":"10m","max-file":"5"}}' | sudo tee /etc/docker/daemon.json
-elseif [ "$OS_NAME" = "Fedora" ]; then
+elif [ "$OS_NAME" = "Fedora" ]; then
   # Add the official Docker repo for Fedora
   sudo $PKG_MGR config-manager addrepo  --overwrite --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo --overwrite
 
