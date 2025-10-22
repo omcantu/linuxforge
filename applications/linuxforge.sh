@@ -9,7 +9,7 @@ Comment=linuxforge Controls
 Exec=alacritty --config-file /home/$USER/.config/alacritty/pane.toml --class=linuxforge --title=linuxforge -e linuxforge
 Terminal=false
 Type=Application
-Icon=/home/$USER/.local/share/omakub/applications/icons/Linuxforge.png
+Icon=/home/$USER/.local/share/omakub/applications/icons/linuxforge.png
 Categories=System;
 StartupNotify=false
 EOF
