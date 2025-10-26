@@ -3,11 +3,13 @@ source ~/.local/share/linuxforge/install/lib/env.sh
 
 
 if [ "$OS_NAME" = "Ubuntu" ]; then
+	cd /tmp
 	wget -qO- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor >signal-desktop-keyring.gpg
 	cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg >/dev/null
 	echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |
 		sudo tee /etc/apt/sources.list.d/signal-xenial.list
 	rm signal-desktop-keyring.gpg
+	cd -
 	run_pkg_mgr update
 	run_pkg_mgr install signal-desktop
 elif [ "$OS_NAME" = "Arch" ]; then
