@@ -28,7 +28,7 @@ if [[ "$OS_NAME" = "Arch" ]]; then
   sudo pacman -Syu --noconfirm --needed git
   sudo pacman -S --needed --noconfirm base-devel
 else
-  run_pkg_mgr install git >/dev/null
+  sudo $PKG_MGR install -y git >/dev/null
 fi
 echo "Cloning linuxforge..."
 rm -rf ~/.local/share/linuxforge
