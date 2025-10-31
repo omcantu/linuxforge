@@ -16,8 +16,8 @@ run_pkg_mgr install \
 else
 run_pkg_mgr install \
   base-devel bash-completion bat btop cargo clang dust eza fastfetch fd ffmpegthumbnailer fontconfig fzf github-cli gum imagemagick  \
-  imv jq lazydocker lazygit libsecret libvips libyaml libreoffice llvm localsend luarocks mariadb-libs mise ncurses noto-fonts noto-fonts-cjk \
-  noto-fonts-emoji noto-fonts-extra nvim obs-studio obsidian openssl plocate postgresql-libs power-profiles-daemon python-gobject \
-  python-poetry-core redis readline rust ripgrep signal-desktop tree-sitter-cli ttf-cascadia-mono-nerd \
-  ttf-jetbrains-mono-nerd unzip woff2-font-awesome xmlstarlet xournalpp zoxide sqlite postgresql clutter nodejs npm
+  imv jq lazydocker lazygit libsecret localsend luarocks mariadb-libs mise ncurses noto-fonts noto-fonts-cjk \
+  noto-fonts-emoji noto-fonts-extra nvim openssl plocate postgresql-libs python-gobject \
+  python-poetry-core redis readline rust ripgrep tree-sitter-cli ttf-cascadia-mono-nerd \
+  ttf-jetbrains-mono-nerd unzip woff2-font-awesome xmlstarlet zoxide sqlite postgresql nodejs npm
 fi
